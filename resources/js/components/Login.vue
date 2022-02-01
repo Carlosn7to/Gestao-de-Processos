@@ -1,6 +1,6 @@
 <template>
     <div class="full center login">
-
+        Testando
     </div>
 </template>
 
