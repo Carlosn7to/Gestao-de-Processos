@@ -15,6 +15,6 @@
     <div id="app">
         @yield('content')
     </div>
-    <script src="{{ asset('js/jQuery/jquery-3.5.1.min.js') }}"></script>
+    <script src="{{ asset('js/jQuery/jquery-3.6.0.min.js') }}"></script>
 </body>
 </html>

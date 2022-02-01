@@ -5268,6 +5268,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Login",
   props: ['route_home', 'image_background_login', 'image_logo'],
@@ -27891,9 +27901,31 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "full center login" })
+  return _c("div", { staticClass: "full login" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "side-image-login" }, [
+      _c("img", { attrs: { src: _vm.image_background_login, alt: "" } }),
+    ]),
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "side-card-login center" }, [
+      _c("div", { staticClass: "card-login shadow-border box-r flex-column" }, [
+        _c("form", { attrs: { action: "#" } }, [
+          _c("label", { attrs: { for: "email" } }, [_vm._v("e-mail")]),
+          _c("br"),
+          _vm._v(" "),
+          _c("input", { attrs: { type: "text" } }),
+        ]),
+      ]),
+    ])
+  },
+]
 render._withStripped = true
 
 

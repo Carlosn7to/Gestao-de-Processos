@@ -5,7 +5,7 @@
 @section('content')
     <login-component
         route_home="{{ route('app.home') }}"
-        image_background_login="{{ asset('background/web.jpg') }}"
-        image_logo="{{ asset('logo.png') }}"
+        image_background_login="{{ asset('background/app.jpg') }}"
+        image_logo="{{ asset('logo_completa.png') }}"
     ></login-component>
 @endsection
