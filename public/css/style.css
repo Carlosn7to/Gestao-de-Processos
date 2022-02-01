@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*,
+::before,
+::after{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto';
+    text-decoration: none !important;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none;
+    list-style: none;
+}
+
+:root {
+
+    /*
+        Main colors
+    */
+        --Primary: #fff;
+
+    /*
+        Border
+    */
+        --border-grey-light: #cccccc30;
+}
+
+/*
+    CONFIGURAÇÃO BÁSICA
+ */
+
+html {
+    font-size: 62.5% !important;
+    overflow: hidden;
+
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+#app {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/*   SCROLL BAR   */
+::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+::-webkit-scrollbar {
+    width: 2px;
+    background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+    background: #dad7d7;
+}
+
+/*   PLACEHOLDER   */
+::-webkit-input-placeholder {
+    color: #33333380;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+/*
+    SUPER CLASSES
+ */
+
+.full {
+    width: 100vw;
+    height: 100vh;
+}
+
+.modal {
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(2px);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shadow-border {
+    border: 1px solid var(--border-grey-light);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.shadow-input {
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+
+.po-abs {
+    position: absolute;
+}
+
+.box-r {
+    border-radius: 10px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.between {
+    justify-content: space-between;
+}
+
+.around {
+    justify-content: space-around;
+}
+
+.width-max {
+    width: 100vw;
+}
+
+.height-max {
+    height: 100vh;
+}
+
+/*
+    Login page
+ */
