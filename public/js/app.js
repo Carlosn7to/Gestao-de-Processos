@@ -5278,9 +5278,40 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Login",
-  props: ['route_home', 'image_background_login', 'image_logo'],
+  props: ['route_home', 'image_background_login', 'image_logo', 'image_logo_system'],
   methods: {},
   data: function data() {
     return {};
@@ -27902,9 +27933,32 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "full login" }, [
-    _vm._m(0),
+    _c("div", { staticClass: "side-card-login center" }, [
+      _c(
+        "div",
+        { staticClass: "po-abs", staticStyle: { top: "0vh", left: "1vw" } },
+        [
+          _c("img", {
+            staticStyle: { width: "8vw", height: "auto" },
+            attrs: { src: _vm.image_logo_system, alt: "" },
+          }),
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "card-login" }, [
+        _c("img", { attrs: { src: _vm.image_logo, alt: "" } }),
+        _vm._v(" "),
+        _vm._m(0),
+        _vm._v(" "),
+        _vm._m(1),
+        _vm._v(" "),
+        _vm._m(2),
+      ]),
+    ]),
     _vm._v(" "),
     _c("div", { staticClass: "side-image-login" }, [
+      _vm._m(3),
+      _vm._v(" "),
       _c("img", { attrs: { src: _vm.image_background_login, alt: "" } }),
     ]),
   ])
@@ -27914,16 +27968,85 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "side-card-login center" }, [
-      _c("div", { staticClass: "card-login shadow-border box-r flex-column" }, [
-        _c("form", { attrs: { action: "#" } }, [
-          _c("label", { attrs: { for: "email" } }, [_vm._v("e-mail")]),
-          _c("br"),
-          _vm._v(" "),
-          _c("input", { attrs: { type: "text" } }),
-        ]),
+    return _c("form", { attrs: { action: "#" } }, [
+      _c("div", { staticClass: "input-login" }, [
+        _c("input", { attrs: { type: "text", placeholder: "E-mail" } }),
+        _vm._v(" "),
+        _c("i", { staticClass: "fi-rr-user" }),
       ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "input-login" }, [
+        _c("input", { attrs: { type: "password", placeholder: "Password" } }),
+        _vm._v(" "),
+        _c("i", { staticClass: "fi-rr-lock" }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "input-check" }, [
+        _c("input", {
+          attrs: { type: "checkbox", name: "ativo", id: "ativo" },
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "ativo" } }, [_vm._v("Lembrar de mim")]),
+      ]),
+      _vm._v(" "),
+      _c("button", { attrs: { type: "submit" } }, [_vm._v("Entrar")]),
+      _vm._v(" "),
+      _c(
+        "span",
+        {
+          staticClass: "forgotPassword",
+          staticStyle: { "text-align": "center" },
+        },
+        [_vm._v("Esqueceu sua senha?")]
+      ),
     ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "hr" }, [
+      _c("div", { staticClass: "line-hr" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "socials-media" }, [
+      _c("img", { attrs: { src: "/icons/whatsapp.png", alt: "" } }),
+      _vm._v(" "),
+      _c("img", { attrs: { src: "/icons/facebook.png", alt: "" } }),
+      _vm._v(" "),
+      _c("img", { attrs: { src: "/icons/instagram.png", alt: "" } }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "modal po-abs",
+        staticStyle: { width: "60%", height: "100%" },
+      },
+      [
+        _c("div", { staticClass: "title-image-login" }, [
+          _c("h6", [
+            _vm._v("Bem vindo ao "),
+            _c("b", [_vm._v("MgtSmart")]),
+            _vm._v(" seu gerenciador inteligente."),
+          ]),
+          _vm._v(" "),
+          _c("span", [_vm._v("Entre com sua conta.")]),
+        ]),
+        _vm._v(" "),
+        _c("span", { staticClass: "po-abs", attrs: { id: "copy" } }, [
+          _vm._v("© Carlos Neto - Todos os direitos reservados"),
+        ]),
+      ]
+    )
   },
 ]
 render._withStripped = true
