@@ -5309,12 +5309,49 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Login",
   props: ['route_home', 'image_background_login', 'image_logo', 'image_logo_system'],
-  methods: {},
+  methods: {
+    activeInput: function activeInput(n) {
+      if (n == 1) {
+        if (this.form.input.email.active == false) {
+          this.form.input.email.active = true;
+        } else {
+          this.form.input.email.active = false;
+        }
+      }
+
+      if (n == 2) {
+        if (this.form.input.password.active == false) {
+          this.form.input.password.active = true;
+        } else {
+          this.form.input.password.active = false;
+        }
+      }
+    }
+  },
   data: function data() {
-    return {};
+    return {
+      form: {
+        input: {
+          email: {
+            active: false
+          },
+          password: {
+            active: false
+          }
+        }
+      }
+    };
   },
   components: {},
   computed: {},
@@ -27948,7 +27985,79 @@ var render = function () {
       _c("div", { staticClass: "card-login" }, [
         _c("img", { attrs: { src: _vm.image_logo, alt: "" } }),
         _vm._v(" "),
-        _vm._m(0),
+        _c("form", { attrs: { action: "#" } }, [
+          _c(
+            "div",
+            {
+              staticClass: "input-login",
+              class: {
+                "input-login-active": _vm.form.input.email.active == true,
+              },
+              on: {
+                focusin: function ($event) {
+                  return _vm.activeInput(1)
+                },
+                focusout: function ($event) {
+                  return _vm.activeInput(1)
+                },
+              },
+            },
+            [
+              _c("input", {
+                attrs: {
+                  type: "email",
+                  placeholder: "E-mail",
+                  autofocus: "",
+                  required: "",
+                },
+              }),
+              _vm._v(" "),
+              _c("i", { staticClass: "fi-rr-user" }),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "input-login",
+              class: {
+                "input-login-active": _vm.form.input.password.active == true,
+              },
+              on: {
+                focusin: function ($event) {
+                  return _vm.activeInput(2)
+                },
+                focusout: function ($event) {
+                  return _vm.activeInput(2)
+                },
+              },
+            },
+            [
+              _c("input", {
+                attrs: {
+                  type: "password",
+                  placeholder: "Password",
+                  required: "",
+                },
+              }),
+              _vm._v(" "),
+              _c("i", { staticClass: "fi-rr-lock" }),
+            ]
+          ),
+          _vm._v(" "),
+          _vm._m(0),
+          _vm._v(" "),
+          _c("button", { attrs: { type: "submit" } }, [_vm._v("Entrar")]),
+          _vm._v(" "),
+          _c(
+            "span",
+            {
+              staticClass: "forgotPassword",
+              staticStyle: { "text-align": "center" },
+            },
+            [_vm._v("Esqueceu sua senha?")]
+          ),
+        ]),
         _vm._v(" "),
         _vm._m(1),
         _vm._v(" "),
@@ -27968,37 +28077,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("form", { attrs: { action: "#" } }, [
-      _c("div", { staticClass: "input-login" }, [
-        _c("input", { attrs: { type: "text", placeholder: "E-mail" } }),
-        _vm._v(" "),
-        _c("i", { staticClass: "fi-rr-user" }),
-      ]),
+    return _c("div", { staticClass: "input-check" }, [
+      _c("input", { attrs: { type: "checkbox", name: "ativo", id: "ativo" } }),
       _vm._v(" "),
-      _c("div", { staticClass: "input-login" }, [
-        _c("input", { attrs: { type: "password", placeholder: "Password" } }),
-        _vm._v(" "),
-        _c("i", { staticClass: "fi-rr-lock" }),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "input-check" }, [
-        _c("input", {
-          attrs: { type: "checkbox", name: "ativo", id: "ativo" },
-        }),
-        _vm._v(" "),
-        _c("label", { attrs: { for: "ativo" } }, [_vm._v("Lembrar de mim")]),
-      ]),
-      _vm._v(" "),
-      _c("button", { attrs: { type: "submit" } }, [_vm._v("Entrar")]),
-      _vm._v(" "),
-      _c(
-        "span",
-        {
-          staticClass: "forgotPassword",
-          staticStyle: { "text-align": "center" },
-        },
-        [_vm._v("Esqueceu sua senha?")]
-      ),
+      _c("label", { attrs: { for: "ativo" } }, [_vm._v("Lembrar de mim")]),
     ])
   },
   function () {
@@ -28014,11 +28096,19 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "socials-media" }, [
-      _c("img", { attrs: { src: "/icons/whatsapp.png", alt: "" } }),
-      _vm._v(" "),
-      _c("img", { attrs: { src: "/icons/facebook.png", alt: "" } }),
-      _vm._v(" "),
-      _c("img", { attrs: { src: "/icons/instagram.png", alt: "" } }),
+      _c("nav", [
+        _c("a", { attrs: { href: "#" } }, [
+          _c("img", { attrs: { src: "/icons/whatsapp.png", alt: "" } }),
+        ]),
+        _vm._v(" "),
+        _c("a", { attrs: { href: "#" } }, [
+          _c("img", { attrs: { src: "/icons/facebook.png", alt: "" } }),
+        ]),
+        _vm._v(" "),
+        _c("a", { attrs: { href: "#" } }, [
+          _c("img", { attrs: { src: "/icons/instagram.png", alt: "" } }),
+        ]),
+      ]),
     ])
   },
   function () {
@@ -28036,7 +28126,7 @@ var staticRenderFns = [
           _c("h6", [
             _vm._v("Bem vindo ao "),
             _c("b", [_vm._v("MgtSmart")]),
-            _vm._v(" seu gerenciador inteligente."),
+            _vm._v(", seu gerenciador inteligente."),
           ]),
           _vm._v(" "),
           _c("span", [_vm._v("Entre com sua conta.")]),
